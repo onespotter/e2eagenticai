@@ -7,7 +7,7 @@ class Config:
 
     # To get llm
     def get_llm_option(self):
-        return self.config["DEFAULT"].get("LLM_OPTIONS").split(",")
+        return self.config["DEFAULT"].get("LLM_OPTIONS").split(", ")
     
     def get_usecae_option(self):
             return self.config["DEFAULT"].get("USECASE_OPTIONS").split(",")
@@ -17,3 +17,10 @@ class Config:
     #To get Title
     def get_page_title(self):
         return self.config["DEFAULT"].get("PAGE_TILTE").split(",")
+    
+
+if __name__=="__main__":
+     config=Config()
+     llm=config.get_llm_option()
+     print("LLM: ",llm)
+
